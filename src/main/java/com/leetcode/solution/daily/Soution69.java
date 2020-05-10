@@ -1,6 +1,7 @@
 package com.leetcode.solution.daily;
 
 /**
+ * 计算整数平方根
  * @author yangguang14
  * @date 2020/5/9.
  */

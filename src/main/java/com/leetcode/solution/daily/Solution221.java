@@ -1,6 +1,7 @@
 package com.leetcode.solution.daily;
 
 /**
+ * 最小正方形
  * @author yangguang14
  * @date 2020/5/8.
  */
