@@ -1,2 +1,7 @@
 *.class
 /target/
+.idea
+.mvn
+mvnw*
+solution.iml
+HELP.md
