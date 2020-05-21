@@ -1,4 +1,4 @@
-package com.leetcode.solution;
+package com.leetcode.solution.daily;
 
 /**
  * 最长回文子串
