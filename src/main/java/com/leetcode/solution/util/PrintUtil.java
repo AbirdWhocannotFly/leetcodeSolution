@@ -15,6 +15,7 @@ public class PrintUtil {
 
     /**
      * 输出数组
+     *
      * @param array
      */
     public static void printIntArray(int[] array) {
@@ -32,10 +33,27 @@ public class PrintUtil {
     }
 
     /**
+     * 打印双层list
+     * @param lists
+     */
+    public static void printListListString(List<List<String>> lists) {
+        System.out.println("[");
+        for (List<String> list : lists) {
+            System.out.println("   [");
+            for (String s : list) {
+                System.out.println("     "+s+",");
+            }
+            System.out.println("   ]");
+        }
+        System.out.println("]");
+    }
+
+    /**
      * 层序输出二叉树
+     *
      * @param root
      */
-    public static void printTreeLevel(TreeNode root){
+    public static void printTreeLevel(TreeNode root) {
         Solution102 solution = new Solution102();
 
         List<List<Integer>> out = solution.levelOrder(root);
@@ -45,11 +63,11 @@ public class PrintUtil {
             for (Integer o : list) {
                 str.append(o.toString()).append(",");
             }
-            str.deleteCharAt(str.length()-1);
+            str.deleteCharAt(str.length() - 1);
             str.append("],");
         }
 
-        str.deleteCharAt(str.length()-1).append("]");
+        str.deleteCharAt(str.length() - 1).append("]");
         System.out.println(str.toString());
     }
 }
