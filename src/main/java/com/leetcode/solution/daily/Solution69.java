@@ -5,7 +5,7 @@ package com.leetcode.solution.daily;
  * @author yangguang14
  * @date 2020/5/9.
  */
-public class Soution69 {
+public class Solution69 {
 
     public int mySqrt(int x) {
 
@@ -47,6 +47,6 @@ public class Soution69 {
 
     public static void main(String[] args) {
         int arg = 2147395599;
-        System.out.println(new Soution69().mySqrt(arg));
+        System.out.println(new Solution69().mySqrt(arg));
     }
 }

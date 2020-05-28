@@ -1,4 +1,4 @@
-package com.leetcode.solution;
+package com.leetcode.solution.daily;
 
 import com.leetcode.solution.structure.LRUCache;
 
