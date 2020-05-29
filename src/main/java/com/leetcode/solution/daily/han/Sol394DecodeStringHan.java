@@ -69,16 +69,19 @@ public class Sol394DecodeStringHan {
         }
 
         int mul = 0;
+        StringBuffer num = new StringBuffer();
         // 接下来获取 对应的数字
         while(sta.size() > 0) {
             char c = (char) sta.peek();
             if (c >= '0' && c <= '9') {
-                mul += mul*10 + Integer.parseInt(c +"");
+                num.insert(0,c);
                 sta.pop();
             } else {
                 break;
             }
         }
+
+        mul = Integer.parseInt(num.toString());
 
         for (char c : parseCode(mul,str)) {
             sta.push(c);
@@ -100,7 +103,11 @@ public class Sol394DecodeStringHan {
         String s = "3[a]2[bc]";
         String s1 = "3[a2[c]]";
         String s2 = "2[abc]3[cd]ef";
+        String s3 = "100[leetcode]";
 
+        System.out.println(new Sol394DecodeStringHan().decodeString(s));
+        System.out.println(new Sol394DecodeStringHan().decodeString(s1));
         System.out.println(new Sol394DecodeStringHan().decodeString(s2));
+        System.out.println(new Sol394DecodeStringHan().decodeString(s3));
     }
 }
