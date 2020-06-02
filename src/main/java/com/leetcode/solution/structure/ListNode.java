@@ -27,6 +27,27 @@ public class ListNode {
         return head;
     }
 
+    public static ListNode initCycleList(int[] nums, int pos) {
+        if (nums.length == 0) {
+            return null;
+        }
+        ListNode head = new ListNode(nums[0]);
+        ListNode tail = head;
+        for (int i = 1; i < nums.length; i++) {
+            tail.next = new ListNode(nums[i]);
+            tail = tail.next;
+        }
+        if (pos > -1) {
+            ListNode cycle = new ListNode(-1);
+            cycle.next = head;
+            for (int i = 0; i < (pos % nums.length); i++) {
+                cycle.next = cycle.next.next;
+            }
+            tail.next = cycle.next;
+        }
+        return head;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("head:" + this.val);
