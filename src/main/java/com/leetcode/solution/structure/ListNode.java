@@ -14,6 +14,11 @@ public class ListNode {
         val = x;
     }
 
+    /**
+     * 构建单链表
+     * @param nums
+     * @return
+     */
     public static ListNode initList(int[] nums) {
         if (nums.length == 0) {
             return null;
@@ -27,6 +32,30 @@ public class ListNode {
         return head;
     }
 
+    /**
+     * 拼接两个链表
+     * @param head
+     * @param tail
+     * @return
+     */
+    public static ListNode concat2List(ListNode head, ListNode tail) {
+        if (head == null) {
+            return tail;
+        }
+        ListNode curr = head;
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+        curr.next = tail;
+        return head;
+    }
+
+    /**
+     * 构建循环链表
+     * @param nums
+     * @param pos
+     * @return
+     */
     public static ListNode initCycleList(int[] nums, int pos) {
         if (nums.length == 0) {
             return null;
