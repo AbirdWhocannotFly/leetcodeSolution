@@ -26,10 +26,10 @@ public class Solution84 {
         if (heights.length == 1) {
             return heights[0];
         }
-        //定义单调栈
+        //定义单调递增栈
         Deque<Integer> stack = new ArrayDeque<>();
         for (int i = 0; i <= heights.length; i++) {
-            //遍历数组(在数组末尾增加0，避免入参单调递增)
+            //遍历数组(在数组末尾增加0，避免入参单调递减)
             int curr = (i == heights.length ? 0 : heights[i]);
             //如果当前值比栈顶元素大，说明栈顶元素需要计算
             while (!stack.isEmpty() && curr < heights[stack.peekLast()]) {
