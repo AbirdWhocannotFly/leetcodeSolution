@@ -34,6 +34,7 @@ public class PrintUtil {
 
     /**
      * 打印双层list
+     *
      * @param lists
      */
     public static void printListListString(List<List<String>> lists) {
@@ -41,7 +42,24 @@ public class PrintUtil {
         for (List<String> list : lists) {
             System.out.println("   [");
             for (String s : list) {
-                System.out.println("     "+s+",");
+                System.out.println("     " + s + ",");
+            }
+            System.out.println("   ]");
+        }
+        System.out.println("]");
+    }
+
+    /**
+     * 打印双层list
+     *
+     * @param lists
+     */
+    public static <T> void printListList(List<List<T>> lists) {
+        System.out.println("[");
+        for (List<T> list : lists) {
+            System.out.print("   [");
+            for (T s : list) {
+                System.out.print("     " + s + ",");
             }
             System.out.println("   ]");
         }
